@@ -22,7 +22,7 @@
 
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">高血压视频</a>
+        <a class="navbar-brand" href="#">前后端分离开发分享</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -56,7 +56,7 @@
             
               <div class="card">
                 <div class="card-header">
-                  News
+                  最新动态
                 </div>
                 <div class="card-body">
                    
@@ -91,7 +91,7 @@
           <div id="app_post">
             <div class="card">
               <div class="card-header">
-                Post
+                发布信息
               </div>
               <div class="card-body">
                 <form @submit.prevent="submitForm">
@@ -104,7 +104,7 @@
                     <textarea class="form-control" id="content" v-model="formData.content" rows="5"></textarea>     
                   </div>
                    
-                  <button type="submit" class="btn btn-primary" style="margin-top:5px">Commit</button>
+                  <button type="submit" class="btn btn-primary" style="margin-top:5px">提交发布</button>
                    
                 </form>
                 <div v-if="isLoading">
@@ -147,7 +147,7 @@
           axios.get('https://tom.rinuo.x10.mx/user',
           {
         params: {
-          domain: 'video.gaoxueya.com',
+          domain: 'open.gaoxueya.com',
           age: 15,
           page: 3,
         },
@@ -170,7 +170,7 @@
       formData: {
         title: '',
         content: '',
-        domain:'video.gaoxueya.com'
+        domain:'open.gaoxueya.com'
       },
       isLoading: false,
       isSuccess: false,
